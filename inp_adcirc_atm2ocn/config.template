@@ -1,0 +1,77 @@
+$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c    \$c\ is comment charachter and will be replaced by \$c\
+$c$c$c$c$c      Run Name         $c$c$c$c$c
+$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c
+name: _Chinnecock_Inlet_test_
+
+$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c
+$c$c$c$c$c  Hindcast Start Time  $c$c$c$c$c
+$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c
+start_year:   $start_year
+start_month:  $start_month
+start_day:    $start_day
+start_hour:   $start_hour
+start_minute: 0
+start_second: 0
+
+$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c
+$c$c$c$c$c  Hindcast Stop Time   $c$c$c$c$c
+$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c
+stop_year:   $stop_year
+stop_month:  $stop_month
+stop_day:    $stop_day
+stop_hour:   $stop_hour
+stop_minute: 0
+stop_second: 0
+
+$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c
+$c$c$c$c$c    Coupling Info                 $c$c$c$c$c
+$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c
+adc_pet_num: $adc_pet_num               $c processes numper for Adcirc
+ww3_pet_num: $ww3_pet_num               $c processes numper for WW3
+atm_pet_num: $atm_pet_num               $c processes numper for reading HWRF data -np np=adc_pet_num+ww3_pet_num+wrf_pet_num
+
+$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c
+$c$c$c$c$c    Coupling Timestep (seconds)   $c$c$c$c$c
+$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c
+cpl_int: 600                 $c Integer seconds
+cpl_num:  0                  $c Numerator of fractional second
+cpl_den:  1                  $c Denominator of fractional second
+
+$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c
+$c$c$c$c$c    Adcirc Timestep (seconds)   $c$c$c$c$c
+$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c
+adc_int:  5                  $c Integer seconds
+adc_num:  0                  $c Numerator of fractional second
+adc_den:  1                  $c Denominator of fractional second
+
+$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c
+$c$c$c$c$c      WW3 Timestep (seconds)      $c$c$c$c$c
+$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c
+ww3_int:  5                  $c Integer seconds
+ww3_num:  0                  $c Numerator of fractional second
+ww3_den:  1                  $c Denominator of fractional second
+
+ww3_dir:  /disks/NASARCHIVE/saeed_moghimi/codes/adc_cap/07-adcirc_esm_v10/inp_wave/
+ww3_nam:  ww3.Constant.YYYYMMDD_14_15_sxy
+ww3_grd:  ww3_grid.nc
+
+
+$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c
+$c$c$c$c$c   HWRF Data Timestep (seconds)   $c$c$c$c$c
+$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c
+atm_int:  3600               $c Integer seconds
+atm_num:  0                  $c Numerator of fractional second
+atm_den:  1                  $c Denominator of fractional second
+atm_dir:  /scratch4/COASTAL/coastal/save/Saeed.Moghimi/models/NEMS/NEMS_inps/inp_atmesh_ike/
+atm_nam:   wind_atm_fin.nc       #ike09l.YYYYMMDD00.hwrfprs.synoptic.0p125.fHHH.grb2.nc_ks.nc
+
+$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c
+$c$c$c$c$c Printouts flags $c$c$c$c$c
+$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c
+print_xxxx:     true        $c Print xxxx statements to err file
+
+$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c
+$c$c$c$c  Write History/Restart Specifications  $c$c$c$c
+$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c$c
+write_xxxx:       true   $c True--> Write history files in xxxxx format
+

@@ -1,0 +1,31 @@
+#!/bin/bash --login
+#
+# Specify job name and directory
+#PBS -N $RunName
+#PBS -A coastal
+#PBS -q $Queue
+#PBS -V
+#
+# Specify where to put stdout and stderr
+#PBS -o job.\${PBS_JOBID}.out
+#PBS -e job.\${PBS_JOBID}.err
+#
+# Request number of nodes to use
+#PBS -l procs=$NumProc
+#
+# Maximize scheduling through HH:MM:SS
+#PBS -l walltime=$WallTime
+#
+
+echo "work dir is >  \${PBS_O_WORKDIR}"
+cd  \${PBS_O_WORKDIR}
+mpirun -np $NumProc ./$ExeFile 
+
+
+##  $NumProc
+##  $ExeFile
+##  $WallTime
+##  $queue
+##  $RunName
+
+
